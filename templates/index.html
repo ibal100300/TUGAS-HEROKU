@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Gender Clasification</title>
+
+    <style>
+    h1 {text-align: center;}
+    p {text-align: center;}
+    div {text-align: center;}
+    .kiri {margin-left: auto;
+    margin-right: auto;}
+    .kanan {margin-left: auto;
+    margin-right: auto;}
+    .radio{margin-top: 20px;}
+    </style>
+</head>
+
+
+
+<body >
+    <!-- component -->
+    <!-- component -->
+    <!-- This example requires Tailwind CSS v2.0+ -->
+<div class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="lg:text-center">
+      <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">TUGAS TEKNIKAL</h2>
+      <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">LINIER REGRESI PREDIKSI BERAT BADAN</p>
+      <p class="mt-4 max-w-4xl text-xl text-gray-400 lg:mx-auto">tugas berikut adalah prediksi dengan metode linier regresi dengan 2 fitur jenis kelamin dan tinggi badan untuk menentukan berat badan seseorang.</p>
+    </div>
+
+    <div class="mt-10">
+      <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
+        <div class="relative">
+          <dt>
+            <p class="ml text-lg leading-6 font-medium text-gray-900">Tinggi Badan</p>
+          </dt>
+          <form class="" action="" method="post">
+            <div class='w-full md:w-full px-3 mb-6'>
+                <input type="text"
+                    class='mt-3 appearance-none block w-full bg-white text-gray-700 border border-gray-400 shadow-inner rounded-md py-3 px-4 leading-tight focus:outline-none  focus:border-gray-500'
+                    id='grid-text-1' type='text' placeholder='Masukkan Tinggi Badan (cm)'
+                    name="weight" required>
+                    <div class="radio">
+                      <label for="">Male</label>
+                      <input type="radio" name="gender" value="male">
+                      <label for="">Female</label>
+                      <input type="radio" name="gender" value="female">
+                    </div>
+            </div>
+            <div class="flex  justify-center">
+                <button
+                    class="w-full font-bold tracking-tight text-gray-900 bg-blue-200 -2 py-1 shadow-sm border border-gray-400 rounded-md hover:bg-red-300 tran"
+                    type="submit">SUBMITED</button>
+            </div>
+          </form>
+        </div>
+        <div class="relative">
+          <dt>
+            <p class="ml text-lg leading-6 font-medium text-gray-900">Hasil Prediksi</p>
+          </dt>
+          {% if result is defined %}
+          <dd class="mt-10 text-3xl leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl">{{result}} Kg</dd>
+          {% endif %}
+        </div>
+      </dl>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>
